@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Git Tracker</title>
+</head>
+<body>
+    <h1>Git Tracker</h1>
+    <a href="/create">Create Issue</a>
+    <ul>
+        {% for issue in issues %}
+            <li>
+                <a href="/update/{{ issue.id }}">{{ issue.title }}</a> (Status: {{ issue.status }})
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
